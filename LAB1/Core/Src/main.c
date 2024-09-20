@@ -54,7 +54,7 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-/*int display7SEG(int counter)
+int display7SEG(int counter)
 {
 	if(counter == 0)
 	{
@@ -157,7 +157,7 @@ static void MX_GPIO_Init(void);
 			HAL_GPIO_WritePin(LED7_GPIO_Port, LED7_Pin, RESET);
 		}
 	return 0;
-} */
+}
 /* USER CODE END 0 */
 
 /**
@@ -194,11 +194,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //int counter = 0;
+  int counter = 0;
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
+	/*  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
 	  HAL_GPIO_WritePin(LED__YELLOW_GPIO_Port, LED__YELLOW_Pin, RESET);
 	  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, RESET);
 	  HAL_GPIO_WritePin(LED_RED2_GPIO_Port, LED_RED2_Pin, SET);
@@ -218,10 +218,10 @@ int main(void)
 	  HAL_GPIO_WritePin(LED_RED2_GPIO_Port, LED_RED2_Pin, RESET);
 	  HAL_GPIO_WritePin(LED_YELLOW2_GPIO_Port, LED_YELLOW2_Pin, RESET);
 	  HAL_GPIO_WritePin(LED_GREEN2_GPIO_Port, LED_GREEN2_Pin, SET);
-	  HAL_Delay(3000);
-	  /*if(counter >= 10) counter = 0;
+	  HAL_Delay(3000); */
+	  if(counter >= 10) counter = 0;
 	   display7SEG(counter++);
-	   HAL_Delay(1000);*/
+	   HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
